@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéDex by Rakib</title>
+    <meta name="description" content="A complete Pokédex with all Pokémon" />
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:title" content="Poké Pixel Palace" />
+    <meta property="og:description" content="A complete Pokédex with all Pokémon" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="app-container">
+      <header>
+        <div class="logo-container">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokéball" class="pokeball-logo">
+          <h1>PokéDex</h1>
+        </div>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search Pokémon...">
+          <div class="filters">
+            <select id="typeFilter">
+              <option value="">Filter by type</option>
+              <option value="normal">Normal</option>
+              <option value="fire">Fire</option>
+              <option value="water">Water</option>
+              <option value="grass">Grass</option>
+              <option value="electric">Electric</option>
+              <option value="ice">Ice</option>
+              <option value="fighting">Fighting</option>
+              <option value="poison">Poison</option>
+              <option value="ground">Ground</option>
+              <option value="flying">Flying</option>
+              <option value="psychic">Psychic</option>
+              <option value="bug">Bug</option>
+              <option value="rock">Rock</option>
+              <option value="ghost">Ghost</option>
+              <option value="dragon">Dragon</option>
+              <option value="dark">Dark</option>
+              <option value="steel">Steel</option>
+              <option value="fairy">Fairy</option>
+            </select>
+            <select id="generationFilter">
+              <option value="">All generations</option>
+              <option value="1">Gen 1</option>
+              <option value="2">Gen 2</option>
+              <option value="3">Gen 3</option>
+              <option value="4">Gen 4</option>
+              <option value="5">Gen 5</option>
+              <option value="6">Gen 6</option>
+              <option value="7">Gen 7</option>
+              <option value="8">Gen 8</option>
+              <option value="9">Gen 9</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="loading-container">
+          <div class="loading-pokeball">
+            <div class="pokeball">
+              <div class="pokeball-top"></div>
+              <div class="pokeball-center">
+                <div class="pokeball-button"></div>
+              </div>
+              <div class="pokeball-bottom"></div>
+            </div>
+          </div>
+          <p>Loading Pokémon...</p>
+        </div>
+        
+        <div id="pokemon-grid" class="pokemon-grid"></div>
+        
+        <div class="pagination">
+          <button id="loadMore" class="load-more-btn">Load More Pokémon</button>
+        </div>
+      </main>
+
+      <div id="pokemon-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <div id="pokemon-details" class="pokemon-details">
+            <!-- Pokemon details will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Design and Devby <a href="https://guns.lol/rakib0x" target="_blank">Rakib</a></p>
+        <p>PokeDex &copy; 2023</p>
+      </footer>
+    </div>
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
